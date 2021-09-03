@@ -1,0 +1,31 @@
+div.modal.city(id="cityNameModal")
+	div.modal-form__body
+		p.text.text--bold.text--16.modal-form__title Выбор города
+
+		div.city__select
+			+city-select({
+				items: [
+					{
+						value: 'select_city',
+						city: 'Выберите город'
+					},
+					{
+						value: 'moscow',
+						city: 'Москва'
+					},
+					{
+						value: 'st_petersburg',
+						city: 'Санкт-Петербург'
+					},
+					{
+						value: 'neftekamsk',
+						city: 'Нефтекамск'
+					},
+					{
+						value: 'zlatoust',
+						city: 'Златоуст'
+					}
+				]
+			})(class="city-select--modal")
+
+		p.modal-form__desc Если вашего города нет в списке, значит наша компания не осуществляет доставку в вашем регионе. Приносим свои извинения и надеемся, что в скором времени мы откроем в вашем городе представительство.

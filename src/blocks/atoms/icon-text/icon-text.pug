@@ -1,0 +1,21 @@
+mixin icon-text(data)
+	div.icon-text(class!=attributes.class)
+		img.icon-text__img(src="images/"+data.img, alt=data.alt)
+
+		if data.link
+			a.icon-text__link(href=data.url)!=data.text
+
+		else if data.tel
+			a.icon-text__link(href="tel:" + data.tel)!=data.text
+
+		else if data.mailto
+			a.icon-text__link(href="mailto:" + data.mailto)!=data.text
+
+		else
+			span.icon-text__text!=data.text
+
+//- вызов
+//- +icon-text({img: '', alt: '', text: ''})
+//- +icon-text({img: '', alt: '', link: true, url: '', text: ''})
+//- +icon-text({img: '', alt: '', tel: '', text: ''})
+//- +icon-text({img: '', alt: '', mailto: '', text: ''})

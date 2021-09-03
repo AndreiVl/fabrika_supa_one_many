@@ -1,0 +1,46 @@
+.video-iframe {
+	/* 2 Block model */
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+
+	/* 4 Visual */
+	background-image: url(../images/about-us__bg-01.png);
+	background-position: left bottom -10px;
+	background-size: 205px;
+	background-repeat: no-repeat;
+	@media(min-width: 768px) {
+		/* 2 Block model */
+		padding-bottom: 56px;
+
+		/* 4 Visual */
+		background-position: left -16px bottom -6px;
+	}
+	@media(min-width: 992px) {
+		/* 4 Visual */
+		background-position: left -16px bottom;
+	}
+	@media(min-width: 1200px) {
+		/* 4 Visual */
+		background-position: left 30px bottom;
+	}
+}
+.video-iframe .iframe-video {
+	/* 2 Block model */
+	width: 100%;
+	@media(min-width: 768px) {
+		/* 2 Block model */
+		width: 800px;
+		height: 450px;
+	}
+}
+.video-iframe--page-product {
+	@media(min-width: 1200px) {
+		/* 4 Visual */
+		background-position: left 95px bottom;
+	}
+	@media(min-width: 1400px) {
+		/* 4 Visual */
+		background-position: left 174px bottom;
+	}
+}

@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «МА&nbsp;ПО с&nbsp;тофу»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/ma_po_s_tof_big.png" alt="Суп «МА ПО с тофу»" title="Суп «МА ПО с тофу»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «МА&nbsp;ПО с&nbsp;тофу»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, тофу (соевые бобы, соль, коагулянт- хлорид кальция, вода), фарш из&nbsp;курицы, паста томатная, имбирь свежий, соус соевый(вода, соевые бобы, рис, соль), мирин (рис, глюкоза, вода, рисовый уксус), сахар тростниковый, лук зеленый свежий, чеснок свежий, масло кунжутное, масло растительное, паста Тобаджан (перец красный острый, растительное масло, кунжутное масло, соль, специи), соль, крахмал кукурузный, перец сычуаньский.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '1,78 г'
+											},
+											{
+												name: 'жиры',
+												number: '2,76 г'
+											},
+											{
+												name: 'углеводы',
+												number: '9,30 г'
+											},
+											{
+												name: 'калории',
+												number: '61,2'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '5,70 г'
+											},
+											{
+												name: 'жиры',
+												number: '8,83 г'
+											},
+											{
+												name: 'углеводы',
+												number: '29,76 г'
+											},
+											{
+												name: 'калории',
+												number: '195,8'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '219', id: 'ma_po_s_tof'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Одно из&nbsp;самых известных блюд китайской кухни. Разрыв шаблона и&nbsp;желание всегда иметь&nbsp;НЗ!</p> <p class="text">Китайцы большие мастера сочетать не&nbsp;сочетаемое, так перемешать продукты, что диву даешься! Ма&nbsp;По&nbsp;Доуфу&nbsp;&mdash; именно так правильно называется это блюдо, пример именно такого смешивания. Словами нельзя описать какие вкусовые эмоции вызывает это блюдо, как говорится, лучше один раз укусить, чем быть укушенным...</p> <p class="text">Посмотрите видео приготовления, возможно, это облегчит вам выбор. Мы&nbsp;рекомендуем его любителям слегка острых, насыщенно пряных блюд с&nbsp;имбирными нотами.</p>',
+								url_video: 'https://www.youtube.com/embed/L-U8s1tsnis'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

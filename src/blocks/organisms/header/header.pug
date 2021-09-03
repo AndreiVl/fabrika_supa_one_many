@@ -1,0 +1,48 @@
+mixin header(data)
+	header.header(class!=attributes.class)
+		div.container
+			div.header__container
+				div.header__logo
+					+logo({img: 'logo.png'})
+
+				div.header__content
+					div.header__body
+						div.header__nav
+							div.header__city
+								+icon-text({img: 'icon--map-svg.svg', alt: 'маркер карты', text: 'Ваш регион:'})(class="icon-text--white")
+								+city-select({
+									items: [
+										{
+											value: 'select_city',
+											city: 'Выберите город'
+										},
+										{
+											value: 'moscow',
+											city: 'Москва'
+										},
+										{
+											value: 'st_petersburg',
+											city: 'Санкт-Петербург'
+										},
+										{
+											value: 'neftekamsk',
+											city: 'Нефтекамск'
+										},
+										{
+											value: 'zlatoust',
+											city: 'Златоуст'
+										}
+									]
+								})
+
+							div.header__menu
+								//- button(id="clearData") Cash
+								+#{data.menu.name}(data.menu.arg)
+
+								+icon-text({img: 'icon--phone.svg', alt: 'Телефон', tel: '+74959227206', text: '+7(495)922-72-06'})(class="icon-text--white icon-text--18")
+
+					div.header__cart
+						+cart-header({icon: 'icon--basket', url: '/order', number: '0'})
+
+					div.header__hamburger
+						include ../../atoms/hamburger/hamburger.pug

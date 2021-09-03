@@ -1,0 +1,25 @@
+.btn--icon {
+	/* 2 Block model */
+	padding: 0;
+
+	/* 4 Visual */
+	background: none;
+	border: none;
+}
+.btn--icon .icon {
+	/* 2 Block model */
+	width: 24px;
+	height: 24px;
+}
+.btn--icon:hover {
+	/* 4 Visual */
+	background-color: transparent;
+}
+.btn--icon:focus {
+	/* 4 Visual */
+	background-color: transparent;
+}
+.btn:hover .icon {
+	/* 4 Visual */
+	fill: $color-orange;
+}

@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Клэм Чаудер»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/klem_chauder_s_midiyami_big.png" alt="Суп «Клэм Чаудер»" title="Суп «Клэм Чаудер»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Клэм Чаудер»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, сливки 10%(сливки, молоко цельное), картофель свежий, мидии в/м, лук репчатый свежий, сельдерей свежий, бекон, масло сливочное коровье, мука пшеничная в/с, масло растительное, соус Ворчестер, соль, розмарин сухой, тимьян сухой, перец черный молотый, лавровый лист.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '3,94 г'
+											},
+											{
+												name: 'жиры',
+												number: '6,52 г'
+											},
+											{
+												name: 'углеводы',
+												number: '7,60 г'
+											},
+											{
+												name: 'калории',
+												number: '103,4'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '12,61 г'
+											},
+											{
+												name: 'жиры',
+												number: '20,86 г'
+											},
+											{
+												name: 'углеводы',
+												number: '24,32 г'
+											},
+											{
+												name: 'калории',
+												number: '330,9'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '229', id: 'klem_chauder_s_midiyami'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Пожалуй, суп &#8470;&nbsp;1&nbsp;в Соединенных Штатах! На&nbsp;удивление вкусно и&nbsp;сытно!</p> <p class="text">Никогда не&nbsp;были в&nbsp;Америке? Да, не&nbsp;совсем просто туда попасть, а&nbsp;получить собственное объективное представление об&nbsp;американской кухне еще сложнее. Различного рода закусочные только сбивают с&nbsp;толку и&nbsp;извращают реальную картину. В&nbsp;результате в&nbsp;нашей голове прочно обосновались бургеры, картошка фри и&nbsp;четвертованные курицы в&nbsp;хрустящей панировке... Но&nbsp;есть и&nbsp;другая Америка! Попробуйте знаменитый Клэм Чаудер, без которого не&nbsp;обходится меню ни&nbsp;одного приличного ресторана в&nbsp;Штатах! Вы&nbsp;будете удивлены насколько это вкусно!</p>',
+								url_video: 'https://www.youtube.com/embed/544vgkhVPaA'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

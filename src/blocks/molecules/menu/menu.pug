@@ -1,0 +1,14 @@
+mixin menu(data)
+	nav.menu
+		ul.menu__list
+			- for (var i = 0; i < data.items.length; i++)
+				li
+					a.menu__link(href=data.items[i]['url'])!=data.items[i]['link']
+//- +menu({
+//- 	items: [
+//- 		{
+//- 			url: '',
+//- 			link: ''
+//- 		}
+//- 	]
+//- })

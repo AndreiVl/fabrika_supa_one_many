@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Харчо с&nbsp;говядиной»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/gruzinskij_harcho_s_govyadinoj_big.png" alt="Суп «Харчо с говядиной»" title="Суп «Харчо с говядиной»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Харчо с&nbsp;говядиной»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, говядина, лук репчатый свежий, перец болгарский сладкий, томатная паста, рис, грецкий орех, соус Ткемали (слива, вода, соль, сахар, специи), укроп свежий, чеснок свежий, петрушка свежая, масло растительное, соль, кинза свежая, базилик сухой, паприка молотая, хмели-сунели, уцхо-сунели(пажитник голубой), кориандр молотый, лавровый лист, приправа аджика жгучая сухая.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '1,15 г'
+											},
+											{
+												name: 'жиры',
+												number: '2,87 г'
+											},
+											{
+												name: 'углеводы',
+												number: '5,00 г'
+											},
+											{
+												name: 'калории',
+												number: '50,0'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '3,68 г'
+											},
+											{
+												name: 'жиры',
+												number: '9,18 г'
+											},
+											{
+												name: 'углеводы',
+												number: '16,00 г'
+											},
+											{
+												name: 'калории',
+												number: '160,0'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '219', id: 'gruzinskij_harcho_s_govyadinoj'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Рецепт знаменитого грузинского шефа Романоза Григалашвили!</p> <p class="text">Вы&nbsp;когда-нибудь бывали в&nbsp;Лагодехи? Именно там, в&nbsp;Восточной Грузии живет замечательный человек и&nbsp;шеф-повар грузинской кухни Романоз Григалашвили. Благодаря его труду и&nbsp;таланту в&nbsp;2003 году мы&nbsp;впервые задумались о&nbsp;том, каким образом можно познакомить людей с&nbsp;замечательной грузинской кухней. Именно в&nbsp;то&nbsp;самое время у&nbsp;меня родилась идея замораживать готовые первые блюда шоковым методом, сохраняя их&nbsp;самым естественным образом без консервантов и&nbsp;стерилизации. Именно с&nbsp;того памятного 2003 года мы&nbsp;ежедневно приобретаем новый опыт, оттачиваем мастерство, чтобы подтвердить свое безусловное идейное и&nbsp;технологическое лидерство.</p> <p class="text">Настоящий грузинский харчо очень не&nbsp;прост в&nbsp;приготовлении! Посмотрите видео, убедитесь в&nbsp;этом сами. Повторите наш рецепт обязательно! Такого харчо вы&nbsp;точно никогда не&nbsp;ели!</p> <p class="text">Есть и&nbsp;другой путь&nbsp;&mdash; закажите этот шедевр прямо здесь и&nbsp;сейчас, в&nbsp;нашем интернет-магазине! Не&nbsp;откажите себе в&nbsp;удовольствии!</p>',
+								url_video: 'https://www.youtube.com/embed/WZ0ZeHIdy8I'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

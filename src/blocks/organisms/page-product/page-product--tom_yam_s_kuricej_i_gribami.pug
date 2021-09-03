@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «ТОМ&nbsp;ЯМ с&nbsp;курицей и грибами»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/tom_yam_s_kuricej_i_gribami_big.png" alt="Суп «ТОМ ЯМ с курицей и грибами»" title="Суп «ТОМ ЯМ с курицей и грибами»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «ТОМ&nbsp;ЯМ с&nbsp;курицей и грибами»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, филе куриное, вешенка свежая, паста Том Кха (соль, сахар, галангал, лемонграсс, соевое масло, красный перец чили, каффир-лайм, усилитель вкуса и&nbsp;аромата глутамат натрия, регулятор кислотности лимонная кислота),томаты свежие, лук репчатый свежий, молоко кокосовое, лайм свежий, рыбный соус(экстракт анчоуса, соль, вода), сахар тростниковый, паста Чили (сахар, лук, чеснок, соевое масло, перец чили, креветочный порошок, рыбный соус(экстракт анчоуса, соль, вода), соль, усилитель вкуса и&nbsp;аромата глутамат натрия), бульон куриный концентрированный, имбирь свежий, кинза свежая, листья кафир-лайма, соль.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '1,42 г'
+											},
+											{
+												name: 'жиры',
+												number: '1,48 г'
+											},
+											{
+												name: 'углеводы',
+												number: '7,76 г'
+											},
+											{
+												name: 'калории',
+												number: '47,0'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '4,54 г'
+											},
+											{
+												name: 'жиры',
+												number: '4,74 г'
+											},
+											{
+												name: 'углеводы',
+												number: '24,83 г'
+											},
+											{
+												name: 'калории',
+												number: '150,4'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '209', id: 'tom_yam_s_kuricej_i_gribami'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Том Ям... Как много в&nbsp;этом звуке для сердца русского слилось...</p> <p class="text">Том Ям&nbsp;везде готовят по-разному, даже в&nbsp;Тайланде! Где-то в&nbsp;его состав включают курицу, а&nbsp;где-то только морепродукты... Кто-то добавляет кокосовое молоко, а&nbsp;кто-то нет... Есть даже любители смешать абсолютно все ингредиенты, какие нашлись на&nbsp;полке азиатских товаров в&nbsp;супермаркете.</p> <p class="text">В&nbsp;этом видео Егор Булатов рассказывает чем отличается один Том Ям&nbsp;от&nbsp;другого и&nbsp;как именно его готовят на&nbsp;Фабрике супа &#8470;&nbsp;1.</p>', 
+								url_video: 'https://www.youtube.com/embed/6wFDhJ3a9Eo'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

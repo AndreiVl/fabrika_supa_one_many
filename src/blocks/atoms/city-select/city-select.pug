@@ -1,0 +1,21 @@
+mixin city-select(data)
+	select.city-select(class!=attributes.class)
+		- for (var i = 0; i < data.items.length; i++)
+			option(value=data.items[i]['value'])!=data.items[i]['city']
+
+//- +city-select({
+//- 	items: [
+//- 		{
+//- 			value: 'select_city',
+//- 			city: 'Выберите город'
+//- 		},
+//- 		{
+//- 			value: 'zlatoust',
+//- 			city: 'Златоуст'
+//- 		},
+//- 		{
+//- 			value: 'chelyabinsk',
+//- 			city: 'Челябинск'
+//- 		}
+//- 	]
+//- })

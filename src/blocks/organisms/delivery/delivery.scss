@@ -1,0 +1,24 @@
+.delivery {
+	/* 2 Block model */
+	margin-bottom: 34px;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		margin-bottom: 94px;
+	}
+}
+.delivery__title {
+	/* 2 Block model */
+	margin-bottom: 45px;
+}
+.delivery-item {
+	/* 2 Block model */
+	margin-bottom: 20px;
+}
+.delivery--pages {
+	/* 2 Block model */
+	margin-bottom: 20px;
+	@media(min-width: 1200px) {
+		/* 2 Block model */
+		margin-bottom: 30px;
+	}
+}

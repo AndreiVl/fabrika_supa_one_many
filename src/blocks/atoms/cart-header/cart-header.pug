@@ -1,0 +1,11 @@
+mixin cart-header(data)
+	if data.url
+		a.cart-header(href=data.url class!=attributes.class)
+			+icon(data.icon, 'icon--24')
+			span.cart-header__number!=data.number
+	else
+		button.cart-header(type="button" class!=attributes.class data_id=data.data_id )
+			img.cart-header__img(src="images/"+data.img, alt=data.alt)
+//- вызов
+//- +cart-header({icon: '', url: '', img: '', alt: '', number: '' })
+//- +cart-header({img: '', alt: ''})

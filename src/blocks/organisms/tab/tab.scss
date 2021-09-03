@@ -1,0 +1,36 @@
+.tab__item {
+	/* 2 Block model */
+	display: none;
+}
+.tab__item--active {
+	/* 2 Block model */
+	display: block;
+}
+.tab__content-body {
+	/* 2 Block model */
+	margin-bottom: 25px;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		margin-bottom: 40px;
+	}
+}
+.tab__content-body .text {
+	/* 2 Block model */
+	margin-bottom: 15px;
+}
+.tab__content {
+	/* 2 Block model */
+	padding-top: 20px;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding-top: 40px;
+	}
+}
+.tab__content .text-14 {
+	/* 2 Block model */
+	margin-bottom: 20px;
+}
+.tab__content .text-14:last-child {
+	/* 2 Block model */
+	margin-bottom: 0;
+}

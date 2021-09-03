@@ -1,0 +1,30 @@
+div.top
+	include ../../organisms/video-bg/video-bg.pug
+	div &nbsp;
+
+	div.top__body
+		div.container
+			div.row
+				div.col-12.col-lg-10.offset-lg-1
+					div.top__info
+						h1.h1.top__title Интернет магазин
+							br
+							|лучших супов мира
+							br
+							|от&nbsp;ЕГОРА БУЛАТОВА 
+						p.lead.top__lead Ресторанная технология шоковой заморозки&nbsp;&mdash; разогревайте и&nbsp;наслаждайтесь в&nbsp;любое удобное время!
+						+btn({text: 'Скидка 10% на первый заказ', type: 'link', url: '#'})
+
+	div.top__footer
+		div.container
+			div.row
+				div.col-12
+					div.top__bottom
+						div &nbsp;
+						div.top__scroll
+							+btn({icon_l: 'icon--arrow-bottom', type: 'link', url: '#'})(class="btn--icon")
+
+						div.top__social
+							+btn({icon_l: 'icon--youtube', type: 'link', url: 'https://www.youtube.com/channel/UCrhUdp4BER6wkWOX9hpFuSw'})(class="btn--icon" target="_blank")
+							+btn({icon_l: 'icon--vk', type: 'link', url: 'https://vk.com/chefegorbulatov'})(class="btn--icon" target="_blank")
+							+btn({icon_l: 'icon--facebook', type: 'link', url: 'https://www.facebook.com/people/Егор-Булатов/100054811620555'})(class="btn--icon" target="_blank")

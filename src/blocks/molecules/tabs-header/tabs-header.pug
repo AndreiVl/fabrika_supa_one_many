@@ -1,0 +1,16 @@
+mixin tabs-header(data)
+	ul.tabs-header(class!=attributes.class)
+		- for (var i = 0; i < data.items.length; i++)
+			li.tabs-header__item
+				if i == 0
+					a.tabs-header__link.tabs-header__link--active(href=data.items[i]['url'])!=data.items[i]['link']
+				else
+					a.tabs-header__link(href=data.items[i]['url'])!=data.items[i]['link']
+
+//- +tabs-header({
+//- 	items: [
+//- 			url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+//- 		{url: '#tab-2', link: 'Приготовление'},
+//- 		{url: '#tab-3', link: 'Характеристики'}
+//- 	]
+//- })

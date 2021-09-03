@@ -1,0 +1,7 @@
+mixin title(data)
+	div.title(class!=attributes.class)
+		div.title__body
+			h2.h2!=data.title
+
+//- вызов
+//- +title({title: ''})

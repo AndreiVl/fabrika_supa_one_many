@@ -1,0 +1,78 @@
+.icon-text {
+	/* 2 Block model */
+	display: flex;
+	align-items: center;
+}
+.icon-text__img {
+	/* 2 Block model */
+	margin-right: 12px;
+
+	/* 3 Typography */
+	color: #000000;
+
+	/* 4 Visual */
+	fill: #000000;
+}
+.icon-text__link,
+.icon-text__text {
+	/* 2 Block model */
+	display: flex;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 25px;
+	color: #000000;
+	text-decoration: none;
+
+	/* 5 Animation */
+	transition: all 0.4s;
+}
+.icon-text__link:hover {
+	/* 4 Visual */
+	opacity: 0.7;
+}
+
+/* -------------------------------------------- */
+
+/*
+ * Modifiers
+ *
+ */
+
+ .icon-text--18 .icon-text__text,
+ .icon-text--18 .icon-text__link {
+	 /* 3 Typography */
+	 font-size: 18px;
+	 font-weight: 600;
+ }
+.icon-text--white .icon-text__text,
+.icon-text--white .icon-text__link {
+	/* 3 Typography */
+	color: #ffffff;
+}
+.icon-text--underline .icon-text__link {
+	/* 3 Typography */
+	text-decoration: underline;
+}
+.icon-text--no-center {
+	/* 2 Block model */
+	align-items: flex-start;
+}
+.icon-text--blue .icon-text__text,
+.icon-text--blue .icon-text__link {
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 16px;
+	line-height: 22px;
+	word-break: break-word;
+	@media (min-width: 768px) {
+		/* 3 Typography */
+		word-break: normal;
+	}
+}
+.icon-text--mr-sm .icon-text__img {
+	/* 2 Block model */
+	margin-right: 5px;
+}

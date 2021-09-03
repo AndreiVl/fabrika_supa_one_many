@@ -1,0 +1,173 @@
+doctype html
+html(lang="ru")
+	include include/head.pug
+	+head('Фабрика Супа')
+
+	body
+		div.wrapper
+			include ../blocks/mixins.pug
+
+			+header({
+				menu: {
+					name: 'menu',
+					arg: {
+						items: [
+							{
+								url: '#delivery',
+								link: 'Доставка и оплата'
+							},
+							{
+								url: '#contacts',
+								link: 'Контакты'
+							}
+						]
+					}
+				}
+			})
+
+			main.main
+				include ../blocks/organisms/top/top.pug
+
+				include ../blocks/organisms/about-us/about-us.pug
+
+				+cat({
+					title: 'Наше меню',
+					items: [
+						{
+							id: 'borshch_s_govyadinoj',
+							title: 'Суп &laquo;Борщ Полтавский&raquo;',
+							desc: 'Борщ&nbsp;&mdash; самый известный русский суп! А&nbsp;у&nbsp;нас он&nbsp;еще и&nbsp;самый вкусный!',
+							price: '209'
+						},
+						{
+							id: 'solyanka_sbornaya_myasnaya',
+							title: 'Суп &laquo;Солянка&raquo;',
+							desc: 'Солянка или селянка? Теперь уже не&nbsp;важно! Этот суп&nbsp;&mdash; настоящий хит в&nbsp;России!',
+							price: '239'
+						},
+						{
+							id: 'sup_lapsha_s_kuricej',
+							title: 'Суп &laquo;Лапша с&nbsp;курицей&raquo;',
+							desc: 'Настоящая домашняя лапша и&nbsp;курочка, которую мы&nbsp;варим не&nbsp;меньше 3&nbsp;часов!',
+							price: '179'
+						},
+						{
+							id: 'lagman',
+							title: 'Суп &laquo;ЛАГМАН с&nbsp;говядиной&raquo;',
+							desc: 'Авторский рецепт Лагмана от&nbsp;Егора Булатова! Не&nbsp;пропустите, это нереально вкусно!',
+							price: '209'
+						},
+						{
+							id: 'vengerskij_gulyash',
+							title: 'Суп &laquo;Гуляш с&nbsp;говядиной&raquo;',
+							desc: 'Сломай стереотипы! Попробуй настоящий венгерский гуляш!',
+							price: '219'
+						},
+						{
+							id: 'afrikanskij_orekhovyj_sup',
+							title: 'Суп &laquo;Африканский ореховый&raquo;',
+							desc: 'Максимальный экстрим не&nbsp;для слабонервных! Божественно вкусно!',
+							price: '219'
+						},
+						{
+							id: 'gruzinskij_harcho_s_govyadinoj',
+							title: 'Суп &laquo;Харчо с&nbsp;говядиной&raquo;',
+							desc: 'Рецепт знаменитого грузинского шефа Романоза Григалашвили!',
+							price: '219'
+						},
+						{
+							id: 'indijskij_dal',
+							title: 'Суп &laquo;Масурдал&raquo;',
+							desc: 'Жемчужина индийской кухни! Всегда мало, всегда нарасхват!',
+							price: '199'
+						},
+						{
+							id: 'klem_chauder_s_midiyami',
+							title: 'Суп &laquo;Клэм Чаудер&raquo;',
+							desc: 'Пожалуй, суп &#8470;&nbsp;1&nbsp;в Соединенных Штатах! На&nbsp;удивление вкусно и&nbsp;сытно!',
+							price: '229'
+						},
+						{
+							id: 'ma_po_s_tof',
+							title: 'Суп &laquo;МА&nbsp;ПО с&nbsp;тофу&raquo;',
+							desc: 'Одно из&nbsp;самых известных блюд китайской кухни. Разрыв шаблона и&nbsp;желание всегда иметь&nbsp;НЗ!',
+							price: '219'
+						},
+						{
+							id: 'mataj_zhyoltyj_s_kuricej',
+							title: 'Суп &laquo;МАТАЙ желтый с&nbsp;курицей&raquo;',
+							desc: 'Давно не&nbsp;испытывал бурю вкусовых эмоций? Ты&nbsp;должен это попробовать! Обязательно!',
+							price: '209'
+						},
+						{
+							id: 'mataj_zelenyj_s_tofu',
+							title: 'Суп &laquo;МАТАЙ зеленый с&nbsp;тофу&raquo;',
+							desc: 'Радость ортодоксального вегана! Все, что доктор прописал!',
+							price: '209'
+						},
+						{
+							id: 'mataj_krasnyj_s_govyadinoj',
+							title: 'Суп &laquo;МАТАЙ красный с&nbsp;говядиной&raquo;',
+							desc: 'Восходящая звезда паназиатской кухни! Попробуй первым&nbsp;&mdash; будь в&nbsp;тренде!',
+							price: '229'
+						},
+						{
+							id: 'miso_s_gribami_shiitake',
+							title: 'Суп &laquo;МИСО с&nbsp;грибами шиитаке&raquo;',
+							desc: '',
+							price: '199'
+						},
+						{
+							id: 'nemeckij_pihelshtajner',
+							title: 'Суп &laquo;Пихельштайнер&raquo;',
+							desc: 'Ахтунг, господа! К&nbsp;столу подается рагу Бисмарка&nbsp;&mdash; три вида мяса!',
+							price: '229'
+						},
+						{
+							id: 'to_yam_nam_kkhon_s_moreproduktami',
+							title: 'Суп &laquo;ТОМ&nbsp;ЯМ с&nbsp;морепродуктами&raquo;',
+							desc: 'Легендарный... возбуждающий...желанный... богатый... Теперь твоя очередь!',
+							price: '259'
+						},
+						{
+							id: 'tom_yam_s_kuricej_i_gribami',
+							title: 'Суп &laquo;ТОМ&nbsp;ЯМ с&nbsp;курицей и&nbsp;грибами&raquo;',
+							desc: 'Том Ям... Как много в&nbsp;этом звуке для сердца русского слилось...',
+							price: '209'
+						},
+						{
+							id: 'tureckij_chechevichnyj_sup',
+							title: 'Суп &laquo;Мерджимек чорбасы&raquo;',
+							desc: 'Мерджимек чорбасы! Ностальгия по&nbsp;турецким курортам!',
+							price: '179'
+						},
+						{
+							id: 'finskij_lohikejtto_s_semgoj',
+							title: 'Суп &laquo;Лохикейтто&raquo;',
+							desc: 'Любимый суп Егора Булатова. Без комментариев.',
+							price: '249'
+						},
+						{
+							id: 'fo_s_kuricej',
+							title: 'Суп &laquo;ФО&nbsp;с&nbsp;курицей&raquo;',
+							desc: 'Более нежный и&nbsp;диетический вариант знаменитого вьетнамского&nbsp;Фо.',
+							price: '199'
+						}
+					]
+				})
+
+				include ../blocks/organisms/advantages/advantages.pug 
+
+				+subscription-form({})
+
+				+delivery({})
+
+				include ../blocks/organisms/contacts/contacts.pug
+
+			include ../blocks/organisms/footer/footer.pug
+
+			include ../blocks/organisms/city/city.pug
+
+			//- include ../blocks/molecules/modal/modal--video.pug
+
+		include include/script.pug

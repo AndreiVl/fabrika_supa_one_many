@@ -1,0 +1,106 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Лапша с&nbsp;курицей»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/sup_lapsha_s_kuricej_big.png" alt="Суп «Лапша с курицей»" title="Суп «Лапша с курицей»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Лапша с&nbsp;курицей»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, куры целые 1 кат., лапша яичная п/ф(мука пшеничная в/с, яйцо куриное, растительное масло, соль), морковь свежая, лук репчатый свежий, масло растительное, укроп свежий, масло сливочное, соль, специи (куркума, ….
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '5,50 г'
+											},
+											{
+												name: 'жиры',
+												number: '2,98 г'
+											},
+											{
+												name: 'углеводы',
+												number: '7,88 г'
+											},
+											{
+												name: 'калории',
+												number: '80,2'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '17,60 г'
+											},
+											{
+												name: 'жиры',
+												number: '9,54 г'
+											},
+											{
+												name: 'углеводы',
+												number: '25,22 г'
+											},
+											{
+												name: 'калории',
+												number: '256,6'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '179', id: 'sup_lapsha_s_kuricej'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Настоящая домашняя лапша и&nbsp;курочка, которую мы&nbsp;варим не&nbsp;меньше 3&nbsp;часов!</p><p class="text">А&nbsp;Вы&nbsp;знаете, в&nbsp;чем секрет хорошей домашней лапши с&nbsp;курочкой? Обычно, люди варят купленного в&nbsp;магазине бройлера, минут&nbsp;30, не&nbsp;больше. Возможно, еще добавляют бульонный кубик для вкуса, затем забрасывают вермишель и&nbsp;вуаля, готово! Дешево и&nbsp;сердито.</p> <p class="text">Но&nbsp;если&nbsp;Вы хотите на&nbsp;самом деле побаловать себя настоящим супом с&nbsp;домашней лапшой(6 яиц на&nbsp;1&nbsp;кг муки) и&nbsp;ароматным, целебным бульоном из&nbsp;суповой курицы, то&nbsp;это к&nbsp;нам!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «ТОМ&nbsp;ЯМ с&nbsp;морепродуктами»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/to_yam_nam_kkhon_s_moreproduktami_big.png" alt="Суп «ТОМ ЯМ с морепродуктами»" title="Суп «ТОМ ЯМ с морепродуктами»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «ТОМ&nbsp;ЯМ с&nbsp;морепродуктами»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, креветка королевская, грибы вешенки свежие, кальмары, паста Том Ям, томаты свежие, лук репчатый красный, мидии в/м, рыбный соус(экстракт анчоуса, соль, вода), лайм свежий, кокосовое молоко сухое, кинза свежая, сахар тростниковый, сок лайма, паста чили(сахар, лук, чеснок, соевое масло, перец чили, креветочный порошок, рыбный соус(экстракт анчоуса, соль, вода), соль, усилитель вкуса и аромата глутамат натрия), галангал, лемонграсс, листья каффир-лайма.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '9,32 г'
+											},
+											{
+												name: 'жиры',
+												number: '1,70 г'
+											},
+											{
+												name: 'углеводы',
+												number: '4,33 г'
+											},
+											{
+												name: 'калории',
+												number: '49,4'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '29,82 г'
+											},
+											{
+												name: 'жиры',
+												number: '5,44 г'
+											},
+											{
+												name: 'углеводы',
+												number: '13,86 г'
+											},
+											{
+												name: 'калории',
+												number: '158,1'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '259', id: 'to_yam_nam_kkhon_s_moreproduktami'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Легендарный... возбуждающий...желанный... богатый... Теперь твоя очередь!</p> <p class="text">Старшее поколение даже не&nbsp;догадывалось о&nbsp;таких комбинациях продуктов в&nbsp;первых блюдах... Да, что греха таить, оно даже не&nbsp;догадывалось о&nbsp;самом наличии таких продуктов...</p> <p class="text">Нынче, в 21 веке каждый россиянин уже с молоком матери впитывает в себя каплю за каплей живительный чудодейственный эликси , рожденный  кулинарами Тайланда! </p> <p class="text">Том Ям&nbsp;&mdash; это уже не&nbsp;просто еда, это символ России, ее&nbsp;неотъемлемая часть и&nbsp;национальное достояние!</p> <p class="text">Попробуйте Том Ям&nbsp;Нам Кхон от&nbsp;Фабрики супа &#8470;&nbsp;1! Мы&nbsp;взяли самые лучшие продукты и&nbsp;отличное настроение! Посмотрите как мы&nbsp;его готовим для вас!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

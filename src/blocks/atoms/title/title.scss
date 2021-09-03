@@ -1,0 +1,132 @@
+.title {
+	/* 2 Block model */
+	display: flex;
+	justify-content: center;
+}
+.title__body {
+	/* 1 Positioning */
+	position: relative;
+
+	/* 2 Block model */
+	display: inline-flex;
+}
+.title__body::before,
+.title__body::after {
+	/* 1 Positioning */
+	position: absolute;
+	top: 57%;
+
+	/* 2 Block model */
+	display: block;
+	height: 2px;
+
+	/* 4 Visual */
+	content: "";
+	background-color: $color-green;
+	transform: translate(-100%, -50%);
+}
+.title__body::before {
+	/* 1 Positioning */
+	left: -22px;
+
+	/* 2 Block model */
+	width: 30px;
+
+	/* 4 Visual */
+	transform: translate(-100%, -50%);
+	@media (min-width: 992px) {
+		/* 1 Positioning */
+		left: -18px;
+
+		/* 2 Block model */
+		width: 71px;
+	}
+}
+.title__body::after {
+	/* 1 Positioning */
+	right: -22px;
+
+	/* 2 Block model */
+	width: 30px;
+
+	/* 4 Visual */
+	transform: translate(100%, -50%);
+	@media (min-width: 992px) {
+		/* 1 Positioning */
+		right: -26px;
+
+		/* 2 Block model */
+		width: 64px;
+	}
+}
+
+/* -------------------------------------------- */
+
+/*
+ * Modifiers
+ *
+ */
+.title--white .h2 {
+	/* 3 Typography */
+	color: #ffffff;
+	@media (min-width: 992px) {
+		/* 3 Typography */
+		font-size: 56px;
+		line-height: 64px;
+	}
+	@media (min-width: 1200px) {
+		/* 3 Typography */
+		font-size: 64px;
+		line-height: 72px;
+	}
+}
+.title--white .title__body::before,
+.title--white .title__body::after {
+	/* 2 Block model */
+	display: none;
+}
+.title--fix-line .title__body::before {
+	/* 1 Positioning */
+	left: -5px;
+
+	/* 2 Block model */
+	width: 20px;
+
+	/* 4 Visual */
+	transform: translate(-100%, -50%);
+	@media (min-width: 768px) {
+		/* 1 Positioning */
+		left: -22px;
+
+		/* 2 Block model */
+		width: 30px;
+	}
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		width: 71px;
+	}
+}
+.title--fix-line .title__body::after {
+	/* 1 Positioning */
+	right: -5px;
+
+	/* 2 Block model */
+	width: 20px;
+
+	/* 4 Visual */
+	transform: translate(100%, -50%);
+	@media (min-width: 768px) {
+		/* 1 Positioning */
+		right: -22px;
+
+		/* 2 Block model */
+		width: 30px;
+	}
+	@media (min-width: 992px) {
+		/* 1 Positioning */
+		right: -24px;
+
+		/* 2 Block model */
+		width: 64px;
+	}
+}

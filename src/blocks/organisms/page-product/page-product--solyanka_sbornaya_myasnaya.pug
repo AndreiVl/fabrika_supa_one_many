@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Солянка»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/solyanka_sbornaya_myasnaya_big.png" alt="Суп «Солянка»" title="Суп «Солянка»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Солянка»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, говядина, лук репчатый свежий, морковь свежая, огурцы соленые, сервелат, грудинка, колбаски охотничьи, томатная паста, лимон свежий, оливки консервированные(оливки, вода, соль), маслины консервированные(маслины, вода, соль), масло сливочное, масло растительное, каперсы консервированные, укроп свежий, бульон говяжий концентрированный натуральный, соль, сахар,  перец черный молотый.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '1,95 г'
+											},
+											{
+												name: 'жиры',
+												number: '6,90 г'
+											},
+											{
+												name: 'углеводы',
+												number: '2,25 г'
+											},
+											{
+												name: 'калории',
+												number: '78,3'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '6,24 г'
+											},
+											{
+												name: 'жиры',
+												number: '22,08 г'
+											},
+											{
+												name: 'углеводы',
+												number: '7,2 г'
+											},
+											{
+												name: 'калории',
+												number: '250,56'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '239', id: 'solyanka_sbornaya_myasnaya'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Солянка или селянка? Теперь уже не&nbsp;важно! Этот суп&nbsp;&mdash; настоящий хит в&nbsp;России!</p><p class="text">Сборная мясная солянка от&nbsp;Егора Булатова и&nbsp;Фабрики супа &#8470;&nbsp;1&nbsp;&mdash; это настоящая вкусовая бомба в&nbsp;Вашем холодильнике! Если Вы&nbsp;ее&nbsp;все-таки обнаружили, то&nbsp;обращайтесь с&nbsp;ней решительно, уничтожайте стремительно и&nbsp;без остатка! Оберегайте мужское население семьи от&nbsp;излишне частых контактов с&nbsp;этим блюдом: замечен ярко выраженный эффект привыкания, что грозит повышением уровня капризности и&nbsp;существенными потерями семейного бюджета!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

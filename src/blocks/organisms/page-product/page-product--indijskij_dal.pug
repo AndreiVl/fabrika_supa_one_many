@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Масурдал»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/indijskij_dal_big.png" alt="Суп «Масурдал»" title="Суп «Масурдал»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Масурдал»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, чечевица красная, томаты, лук репчатый свежий, кинза свежая, чеснок свежий, имбирь свежий, масло сливочное, соль, лимонный сок, сахар, масло растительное, куркума, гарам масала, тмин, корица, паприка молотая, асафетида, карри нежный, кориандр молотый, горчица семена, зира, перец чили молотый, гвоздика.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '3,09 г'
+											},
+											{
+												name: 'жиры',
+												number: '0,98 г'
+											},
+											{
+												name: 'углеводы',
+												number: '8,06 г'
+											},
+											{
+												name: 'калории',
+												number: '54,8'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '9,89 г'
+											},
+											{
+												name: 'жиры',
+												number: '3,14 г'
+											},
+											{
+												name: 'углеводы',
+												number: '25,70 г'
+											},
+											{
+												name: 'калории',
+												number: '175,4'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '199', id: 'indijskij_dal'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Жемчужина индийской кухни! Всегда мало, всегда нарасхват!</p> <p class="text">С&nbsp;каждым днем почитателей индийской кухни становится все больше и&nbsp;больше. Как грибы после дождя появляются вегетарианские кафе, где вкусно, сытно и&nbsp;не&nbsp;дорого. А&nbsp;еще и&nbsp;отвечает самым строгим требованиям ЗОЖ. Масурдал&nbsp;&mdash; не&nbsp;просто трендовое блюдо, это восторг от&nbsp;которого перехватывает горло! Блюдо готовится легко и&nbsp;просто, но&nbsp;это&nbsp;&mdash; кажущаяся простота, отшлифованная народными традициями на&nbsp;протяжении нескольких веков, если не&nbsp;тысячелетий!</p> <p class="text">Попробуйте обязательно, но&nbsp;учитывайте, что блюдо достаточное острое!</p>',
+								url_video: 'https://www.youtube.com/embed/Nu4HZlaMWe4'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

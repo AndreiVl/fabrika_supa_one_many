@@ -1,0 +1,89 @@
+.btn {
+	/* 1 Positioning */
+	position: relative;
+
+	/* 2 Block model */
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 27px;
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22px;
+	color: #ffffff;
+	text-decoration: none;
+	vertical-align: middle;
+
+	/* 4 Visual */
+	cursor: pointer;
+	user-select: none;
+	background-color: $color-orange;
+	border-radius: 5px;
+	border: 1px solid $color-orange;
+	outline: none;
+
+	/* 5 Animation */
+	transition: all 0.4s;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.btn:hover {
+	/* 3 Typography */
+	color: $color-orange;
+
+	/* 4 Visual */
+	background-color: $color-white;
+}
+.btn:focus {
+	/* 3 Typography */
+	color: $color-orange;
+
+	/* 4 Visual */
+	background-color: $color-white;
+}
+.btn .icon {
+	/* 2 Block model */
+	box-sizing: inherit;
+	flex-shrink: 0;
+	width: 15px;
+	height: 15px;
+
+	/* 4 Visual */
+	fill: #ffffff;
+
+	/* 5 Animation */
+	transition: all 0.4s;
+}
+.btn:hover .icon {
+	/* 4 Visual */
+	fill: #000000;
+}
+.btn .icon:first-child:not(:last-child) {
+	/* 2 Block model */
+	margin-right: 15px;
+}
+.btn .icon:last-child:not(:first-child) {
+	/* 2 Block model */
+	margin-left: 15px;
+}
+
+/* -------------------------------------------- */
+
+/*
+ * Modifiers
+ *
+ */
+
+// @import "--block/--block";
+@import "--outline/--outline";
+// @import "--flat/--flat";
+@import "--icon/--icon";
+@import "--green/--green";
+@import "--black/--black";
+@import "--red/--red";

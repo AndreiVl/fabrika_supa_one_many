@@ -1,0 +1,18 @@
+mixin compound-value(data)
+	div.compound-value
+		p.text.text--16.text--bold.compound-value__title!=data.title
+		- for (var i = 0; i < data.items.length; i++)
+			div.compound-value__component
+				p.text.text--14.compound-value__dashe 
+					span!=data.items[i]['name']
+				p.text.text--14.compound-value__number!=data.items[i]['number']
+
+//- +compound-value({
+//- 	title: ''.
+//- 	items: [
+//- 		{
+//- 			name: '',
+//- 			number: ''
+//- 		}
+//- 	]
+//- })

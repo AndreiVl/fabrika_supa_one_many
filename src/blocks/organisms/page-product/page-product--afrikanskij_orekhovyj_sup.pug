@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Африканский ореховый»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/afrikanskij_orekhovyj_sup_big.png" alt="Суп «Африканский ореховый»" title="Суп «Африканский ореховый»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Африканский ореховый»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, говядина, рис, копченая курица, томаты, лук репчатый свежий, арахис жареный тертый, шпинат, перец болгарский свежий, паста томатная, соус рыбный (экстракт анчоуса, соль, сахар), паста чили (сахар, лук, чеснок, соевое масло, перец чили, креветочный порошок, рыбный соус ( экстракт анчоуса, соль, вода), соль, усилитель вкуса и аромата глутамат натрия), соль, чеснок свежий, имбирь свежий.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '7,83 г'
+											},
+											{
+												name: 'жиры',
+												number: '5,55 г'
+											},
+											{
+												name: 'углеводы',
+												number: '10,67 г'
+											},
+											{
+												name: 'калории',
+												number: '129,5'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '25,06 г'
+											},
+											{
+												name: 'жиры',
+												number: '17,76 г'
+											},
+											{
+												name: 'углеводы',
+												number: '34,14 г'
+											},
+											{
+												name: 'калории',
+												number: '414,4'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '219', id: 'afrikanskij_orekhovyj_sup'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Максимальный экстрим не&nbsp;для слабонервных! Божественно вкусно!</p><p class="text"> Мы&nbsp;еще можем себе представить в&nbsp;супе грецкий орех... Например, в&nbsp;харчо. Но&nbsp;чтобы арахис сделать основой первого блюда&nbsp;&mdash; это уже перебор! Тем не&nbsp;менее африканцы не&nbsp;мудрствуя лукавосварили суп, видимо, из&nbsp;того, что попалось под руку! И&nbsp;знаете, что я&nbsp;вам скажу? Пусть&nbsp;бы им&nbsp;еще раз попалось что-нибудь этакое, потому, что жители самого жаркого континента явили миру настоящее чудо!</p><p class="text">Посмотрите видео приготовления этого супа! Отгадайте правильно весь его ингредиентный состав и&nbsp;получите замечательный подарок от&nbsp;Егора Булатова и&nbsp;Фабрики супа &#8470;&nbsp;1!</p> <p class="text">Ну&nbsp;и&nbsp;конечно&nbsp;же закажите его обязательно в&nbsp;нашем интернет-магазине!</p>', 
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

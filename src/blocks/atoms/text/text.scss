@@ -1,0 +1,37 @@
+.text {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+	color: $color-text;
+}
+.text--bold {
+	/* 3 Typography */
+	font-weight: bold;
+}
+.text--gray {
+	/* 3 Typography */
+	color: $color-text-gray;
+}
+.text--white {
+	/* 3 Typography */
+	color: $color-white;
+}
+.text--12 {
+	/* 3 Typography */
+	font-size: 12px;
+	line-height: 16px;
+}
+.text--14 {
+	/* 3 Typography */
+	font-size: 14px;
+}
+.text--16 {
+	/* 3 Typography */
+	font-size: 16px;
+}
+

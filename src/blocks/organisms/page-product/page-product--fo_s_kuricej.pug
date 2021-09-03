@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «ФО с&nbsp;курицей»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/fo_s_kuricej_big.png" alt="Суп «ФО с курицей»" title="Суп «ФО с курицей»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «ФО с&nbsp;курицей»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, филе куриное, лапша рисовая(вода, рисовая мука), бульон куриный концентрированный(бульон куриный концентрированный, соль поваренная пищевая), лук репчатый красный свежий, лук зеленый свежий, лайм свежий, сахар тростниковый, кинза свежая, рыбный соус(экстракт анчоуса, соль, сахар), соль, имбирь свежий, специи(гвоздика, кориандр, бадьян, корица), перец чили свежий, сок лайма сухой.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '3,84 г'
+											},
+											{
+												name: 'жиры',
+												number: '2,53 г'
+											},
+											{
+												name: 'углеводы',
+												number: '2,71 г'
+											},
+											{
+												name: 'калории',
+												number: '47,2'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '12,29 г'
+											},
+											{
+												name: 'жиры',
+												number: '8,10 г'
+											},
+											{
+												name: 'углеводы',
+												number: '8,67 г'
+											},
+											{
+												name: 'калории',
+												number: '151,0'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '199', id: 'fo_s_kuricej'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Более нежный и&nbsp;диетический вариант знаменитого вьетнамского&nbsp;Фо.</p><p class="text">Вьетнамцы очень трудолюбивый и&nbsp;терпеливый народ. А&nbsp;как иначе можно было создать такой шедевр, как суп Фо? Чтобы приготовить это знаменитое уже на&nbsp;весь мир блюдо повара днями, неделями без перерыва, денно и&nbsp;нощно, должны готовить его основу&nbsp;&mdash; мясной бульон. Именно он&nbsp;отличает&nbsp;Фо от&nbsp;всех остальных супов!</p> <p class="text">Оригинальный букет специй и&nbsp;приправ только усугубляет ситуацию, делая человека беспомощным против этой кулинарной магии./p> <p class="text">Обязательно попробуйте Фо&nbsp;Га&nbsp;&mdash; родного брата Фо&nbsp;Бо, получите незабываемые вкусовые впечатления!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

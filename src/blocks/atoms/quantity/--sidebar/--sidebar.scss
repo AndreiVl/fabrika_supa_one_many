@@ -1,0 +1,33 @@
+.quantity--sidebar input {
+	/* 3 Typography */
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 600;
+
+	/* 4 Visual */
+	border: none;
+}
+.quantity--sidebar-button {
+	/* 4 Visual */
+	border: none;
+}
+.quantity--sidebar .quantity-button {
+	/* 3 Typography */
+	font-weight: 600;
+	color: #CDCDCD;
+}
+.quantity--sidebar .quantity-button:hover {
+	/* 3 Typography */
+	color: $color-text-gray;
+
+	/* 4 Visual */
+	background-color: transparent;
+}
+.quantity--sidebar .quantity-button.quantity-up {
+	/* 4 Visual */
+	border: none;
+}
+.quantity--sidebar .quantity-button.quantity-down {
+	/* 4 Visual */
+	border: none;
+}

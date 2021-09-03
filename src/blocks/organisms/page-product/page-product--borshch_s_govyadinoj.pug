@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Борщ Полтавский»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/borshch_s_govyadinoj_big.png" alt="Суп «Борщ Полтавский»" title="Суп «Борщ Полтавский»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Борщ Полтавский»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, говядина, капуста свежая, морковь свежая, картофель свежий, свекла свежая, лук репчатый свежий, сало копченое, томатная паста, бульон говяжий концентрированный натуральный, масло сливочное, масло растительное, лук зеленый свежий, укроп свежий, уксус яблочный 9%, соль, чеснок свежий, сахар, сок свеклы сухой, перец черный молотый.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '4,26 г'
+											},
+											{
+												name: 'жиры',
+												number: '8,76 г'
+											},
+											{
+												name: 'углеводы',
+												number: '4,44 г'
+											},
+											{
+												name: 'калории',
+												number: '106,6'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '13,63 г'
+											},
+											{
+												name: 'жиры',
+												number: '28,03 г'
+											},
+											{
+												name: 'углеводы',
+												number: '14,21 г'
+											},
+											{
+												name: 'калории',
+												number: '341,1'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '209', id: 'borshch_s_govyadinoj'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Борщ&nbsp;&mdash; самый известный русский суп! А&nbsp;у&nbsp;нас он&nbsp;еще и&nbsp;самый вкусный!</p> <p class="text">Самый известный, самый любимый, самый родной русский суп всех времен и&nbsp;народов! В&nbsp;нашем рецепте борщ объединил все лучшее, что есть в&nbsp;каждом уголке огромной Русской земли&nbsp;&mdash; в&nbsp;Великой Руси, Малой Руси и&nbsp;Белой Руси!</p> <p class="text">Обязательно попробуйте борщ от&nbsp;Егора Булатова и&nbsp;Фабрики супа &#8470;&nbsp;1&nbsp;&mdash; привыкайте к&nbsp;хорошему!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

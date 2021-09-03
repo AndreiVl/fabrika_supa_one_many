@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Гуляш с&nbsp;говядиной»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/vengerskij_gulyash_big.png" alt="Суп «Гуляш с говядиной»" title="Суп «Гуляш с говядиной»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Гуляш с&nbsp;говядиной»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, говядина, лук репчатый свежий, помидоры в&nbsp;собственном соку, морковь свежая, картофель свежий, перец болгарский сладкий, мука пшеничная в/с, сало свиное копченое, яйцо куриное, бульон говяжий концентрированный, паприка молотая, соль, петрушка свежая, чеснок свежий, уксус бальзамический, кориандр молотый, тмин молотый, перец черный молотый.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '6,29 г'
+											},
+											{
+												name: 'жиры',
+												number: '5,21 г'
+											},
+											{
+												name: 'углеводы',
+												number: '14,13 г'
+											},
+											{
+												name: 'калории',
+												number: '127,0'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '20,13 г'
+											},
+											{
+												name: 'жиры',
+												number: '16,67 г'
+											},
+											{
+												name: 'углеводы',
+												number: '45,22 г'
+											},
+											{
+												name: 'калории',
+												number: '406,4'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '219', id: 'vengerskij_gulyash'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Сломай стереотипы! Попробуй настоящий венгерский гуляш!</p> <p class="text">Ты&nbsp;все еще помнишь вкус гуляша из&nbsp;столовой пионерского лагеря? Кусочки говядины с&nbsp;ароматной подливой и&nbsp;картофельным пюре? Вот просто выкинь сейчас все эти воспоминания из&nbsp;головы! Настоящий венгерский гуляш не&nbsp;имеет ничего общего с&nbsp;советским общепитом, какие&nbsp;бы приятные ностальгические воспоминания с&nbsp;ним не&nbsp;были связаны.</p> <p class="text">Венгерский гуляш&nbsp;&mdash; это густое мясное рагу с&nbsp;многовековой историей и&nbsp;традициями! Вам всего лишь один раз достаточно попробовать это блюдо, чтобы понять разницу! Мы&nbsp;очень надеемся, что венгерский гуляш станет желанным трофеем в&nbsp;вашем холодильнике!</p>',
+								url_video: 'https://www.youtube.com/embed/wE7vCH160Dc'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

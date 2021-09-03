@@ -1,0 +1,35 @@
+form.form-checkout(action="#" method="post")
+
+	h2.h2.h2--22.form-checkout__title Контактная информация
+
+	div.form-checkout__row
+		div.form-checkout__item
+			+input({type: 'text', name: 'name_client', label_text: '<span>*</span>Имя', placeholder: 'Ваше Имя'})(class="input--form order-form__required input--error")
+		div.form-checkout__item
+			+input({type: 'tel', name: 'tel_client', label_text: '<span>*</span>Телефон', placeholder: 'Ваш Телефон'})(class="input--form order-form__required")
+		div.form-checkout__item
+			+input({type: 'email', name: 'email_client_2', label_text: '<span>*</span>E-mail', placeholder: 'Ваш E-mail'})(class="input--form order-form__required")
+
+	h2.h2.h2--22.form-checkout__title Адрес доставки
+
+	div.form-checkout__row
+		div.form-checkout__item
+			+input({type: 'text', name: 'city_client', label_text: '<span>*</span>Город', placeholder: 'Ваш Город'})(class="input--form order-form__required")
+		div.form-checkout__item
+			+input({type: 'text', name: 'street_client', label_text: '<span>*</span>Улица', placeholder: 'Ваша Улица'})(class="input--form order-form__required")
+		div.form-checkout__item.form-checkout__item--sm
+			+input({type: 'text', name: 'home_client', label_text: '<span>*</span>Дом', placeholder: 'Ваш Дом'})(class="input--form order-form__required")
+		div.form-checkout__item.form-checkout__item--sm
+			+input({type: 'text', name: 'building_client', label_text: 'Корпус', placeholder: 'Ваш Корпус'})(class="input--form")
+		div.form-checkout__item.form-checkout__item--sm
+			+input({type: 'text', name: 'apartment_client', label_text: 'Квартира', placeholder: 'Ваша Квартира'})(class="input--form")
+		div.form-checkout__textarea
+			label(for="massage") Коментарий
+			textarea(id="massage" name="massage" rows="8" placeholder="Введите свой коментарий")
+
+	h2.h2.h2--22.form-checkout__title Способы оплаты
+
+	p.text.text--14.form-checkout__text Вы можете оплатить заказ наличными курьеру или банковской картой через терминал, который находится у курьера.
+
+	+btn({text: 'Оформить заказ', type: 'submit'})(class="btn--red" id="orderDone")
+

@@ -1,0 +1,61 @@
+doctype html
+html(lang="ru")
+	include include/head.pug
+	+head('Фабрика Супа')
+
+	body
+		div.wrapper
+			include ../blocks/mixins.pug
+			div.intro-page
+				div.container
+					div.row.justify-content-center
+						div.col-12.col-lg-6
+							div.intro-page__top
+								+logo({img: 'logo.png'})
+							ul.intro-page__list
+								li.intro-page__item
+									a(href="index.html" target="_blank") Фабрика супа №1
+								li.intro-page__item
+									a(href="order.html" target="_blank") Оформление заказа
+								li.intro-page__item
+									a(href="vengerskij_gulyash.html" target="_blank") Суп «Гуляш с говядиной»
+								li.intro-page__item
+									a(href="afrikanskij_orekhovyj_sup.html" target="_blank") Суп «Африканский ореховый»
+								li.intro-page__item
+									a(href="borshch_s_govyadinoj.html" target="_blank") Суп «Борщ Полтавский»
+								li.intro-page__item
+									a(href="gruzinskij_harcho_s_govyadinoj.html" target="_blank") Суп «Харчо с говядиной»
+								li.intro-page__item
+									a(href="indijskij_dal.html" target="_blank") Суп «Масурдал»
+								li.intro-page__item 
+									a(href="klem_chauder_s_midiyami.html" target="_blank") Суп «Клэм Чаудер»
+								li.intro-page__item
+									a(href="lagman.html" target="_blank") Суп «ЛАГМАН с говядиной»
+								li.intro-page__item
+									a(href="ma_po_s_tof.html" target="_blank") Суп «МА ПО с тофу»
+								li.intro-page__item
+									a(href="mataj_zhyoltyj_s_kuricej.html" target="_blank") Суп «МАТАЙ желтый с курицей»
+								li.intro-page__item
+									a(href="mataj_zelenyj_s_tofu.html" target="_blank") Суп «МАТАЙ зеленый с тофу»
+								li.intro-page__item
+									a(href="mataj_krasnyj_s_govyadinoj.html" target="_blank") Суп «МАТАЙ красный с говядиной»
+								li.intro-page__item
+									a(href="miso_s_gribami_shiitake.html" target="_blank") Суп «МИСО с грибами шиитаке»
+								li.intro-page__item
+									a(href="nemeckij_pihelshtajner.html" target="_blank") Суп «Пихельштайнер»
+								li.intro-page__item
+									a(href="solyanka_sbornaya_myasnaya.html" target="_blank") Суп «Солянка»
+								li.intro-page__item
+									a(href="sup_lapsha_s_kuricej.html" target="_blank") Суп «Лапша с курицей»
+								li.intro-page__item
+									a(href="to_yam_nam_kkhon_s_moreproduktami.html" target="_blank") Суп «ТОМ ЯМ с морепродуктами»
+								li.intro-page__item
+									a(href="tom_yam_s_kuricej_i_gribami.html" target="_blank") Суп «ТОМ ЯМ с курицей и грибами»
+								li.intro-page__item
+									a(href="tureckij_chechevichnyj_sup.html" target="_blank") Суп «Мерджимек чорбасы»
+								li.intro-page__item
+									a(href="finskij_lohikejtto_s_semgoj.html" target="_blank") Суп «Лохикейтто»
+								li.intro-page__item
+									a(href="fo_s_kuricej.html" target="_blank") Суп «ФО с курицей»
+								li.intro-page__item
+									a(href="francuzskij_lukovyj_s_grenkami.html" target="_blank") Суп «ФРАНЦУЗСКИЙ ЛУКОВЫЙ с гренками»

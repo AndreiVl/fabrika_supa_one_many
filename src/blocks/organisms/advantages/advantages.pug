@@ -1,0 +1,27 @@
+section.advantages.block(id="advantages")
+	div.container
+		div.row
+			div.col-12
+				div.block__title
+					h2.h2.h2--big Наши преимущества
+
+	div.container
+		div.row.advantages__body
+			div.col-12.col-lg-6
+				div.advantages__left
+					div.advantages__item
+						+item-advantages({title: 'Уникальный ассортимент', text: 'Есть из чего выбрать! <br>Супы со всех континентов'})
+					div.advantages__item
+						+item-advantages({title: '&laquo;Зеленый ярлык&raquo;&nbsp;', text: '100% натуральная сертифицированная продукция без консервантов, искусственных красителей, ароматизаторов и&nbsp;усилителей вкуса'})
+					div.advantages__item
+						+item-advantages({title: 'Прямые цены от&nbsp;производителя', text: 'В&nbsp;два раза ниже недорогого ресторана!'})
+
+			div.col-12.col-lg-6
+				div.advantages__right
+					div.advantages__item
+						+item-advantages({title: 'Все блюда', text: 'Разогреваются в&nbsp;СВЧ-печи в&nbsp;течение 7&nbsp;минут'})(class="item-advantages--revers")
+					div.advantages__item
+						+item-advantages({title: 'Хранение', text: 'В морозильной камере до 6 месяцев'})(class="item-advantages--revers")
+					div.advantages__item
+						+item-advantages({title: 'Посмотрите, как это сделано!', text: 'Видео приготовления каждого блюда на нашем канале в YOUTUBE!'})(class="item-advantages--revers")
+

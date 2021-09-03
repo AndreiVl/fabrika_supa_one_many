@@ -1,0 +1,12 @@
+.sidebar__item {
+	/* 2 Block model */
+	margin-bottom: 40px;
+	@media(min-width: 1200px) {
+		/* 2 Block model */
+		margin-bottom: 100px;		
+	}
+}
+.sidebar__item:last-child {
+	/* 2 Block model */
+	margin-bottom: 0;
+}

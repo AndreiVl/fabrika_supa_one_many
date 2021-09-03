@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «Мерджимек чорбасы»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/tureckij_chechevichnyj_sup_big.png" alt="Суп «Мерджимек чорбасы»" title="Суп «Мерджимек чорбасы»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «Мерджимек чорбасы»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, чечевица красная, лук репчатый свежий, морковь свежая, масло растительное, томатная паста, соль, паприка молотая, зира, аджика жгучая сухая, куркума, перец черный молотый.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '4,18 г'
+											},
+											{
+												name: 'жиры',
+												number: '3,33 г'
+											},
+											{
+												name: 'углеводы',
+												number: '11,48 г'
+											},
+											{
+												name: 'калории',
+												number: '87,4'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '13,38 г'
+											},
+											{
+												name: 'жиры',
+												number: '10,66 г'
+											},
+											{
+												name: 'углеводы',
+												number: '36,74 г'
+											},
+											{
+												name: 'калории',
+												number: '279,7'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '179', id: 'tureckij_chechevichnyj_sup'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Мерджимек чорбасы! Ностальгия по&nbsp;турецким курортам!</p> <p class="text">Легкий и&nbsp;изящный, сытный и&nbsp;ароматный&nbsp;&mdash; вот такими эпитетами можно наделить этот полюбившийся россиянам турецкий супчик! Для тех, кто ни&nbsp;разу не&nbsp;был в&nbsp;Турции(если все-таки таковые имеются), наш интернет-магазин&nbsp;&mdash; великолепный шанс восполнить культурный пробел и&nbsp;отведать самое популярное блюдо в&nbsp;бывшей Османской империи и&nbsp;сложить о&nbsp;нем собственное представление! Смело заказывайте и&nbsp;даже не&nbsp;раздумывайте! Афиет олсун!</p>',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

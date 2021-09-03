@@ -1,0 +1,26 @@
+div.cart
+	div.cart__header
+		h2.h2.h2--22 Ваш заказ
+
+	ul.cart__list(id="shopSidebarList")
+		li.cart__item
+			+order-item({img: 'vengerskij_gulyash.png', alt: 'Венгерский гуляш', title: 'Венгерский гуляш', price: '200'})
+		li.cart__item
+			+order-item({img: 'vengerskij_gulyash.png', alt: 'Венгерский гуляш', title: 'Венгерский гуляш', price: '200'})
+		li.cart__item
+			+order-item({img: 'vengerskij_gulyash.png', alt: 'Венгерский гуляш', title: 'Венгерский гуляш', price: '200'})
+		li.cart__item
+			+order-item({img: 'vengerskij_gulyash.png', alt: 'Венгерский гуляш', title: 'Венгерский гуляш', price: '200'})
+		li.cart__item
+			+order-item({img: 'vengerskij_gulyash.png', alt: 'Венгерский гуляш', title: 'Венгерский гуляш', price: '200'})
+
+	div.cart__footer
+		ul.cart__footer-list
+			li.cart__footer-item
+				span.text.text--16.text--bold.text--gray Доставка:
+				span.text.text--16.text--bold.text--gray.cart__delivery 0 р.
+			li.cart__footer-item
+				span.text.text--16.text--bold Итого:
+				span.text.text--16.text--bold.cart__total 0 р.
+
+	button.btn.btn--green.shop-sidebar__claer(id="clearData") Очистить список

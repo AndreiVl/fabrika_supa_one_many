@@ -1,0 +1,106 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп ФРАНЦУЗСКИЙ ЛУКОВЫЙ с&nbsp;гренками
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/francuzskij_lukovyj_s_grenkami_big.png" alt="Суп Французский ЛУКОВЫЙ с гренками" title="Суп Французский ЛУКОВЫЙ с гренками")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп ФРАНЦУЗСКИЙ ЛУКОВЫЙ с&nbsp;гренками
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, лук репчатый свежий, вино белое сухое, сыр тертый Российский, сыр тертый Голландский, сыр тертый Маасдам, багет, бульон говяжий концентрированный натуральный, масло оливковое, масло сливочное, соль, сахар, мука пшеничная в/с, чеснок свежий, уксус бальзамический, перец черный молотый, тимьян, лавровый лист.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '6,63 г'
+											},
+											{
+												name: 'жиры',
+												number: '9,10 г'
+											},
+											{
+												name: 'углеводы',
+												number: '3,38 г'
+											},
+											{
+												name: 'калории',
+												number: '129,6'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '21,22 г'
+											},
+											{
+												name: 'жиры',
+												number: '29,12 г'
+											},
+											{
+												name: 'углеводы',
+												number: '10,82 г'
+											},
+											{
+												name: 'калории',
+												number: '414,7'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '199', id: 'francuzskij_lukovyj_s_grenkami'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								url_video: 'https://www.youtube.com/embed/'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

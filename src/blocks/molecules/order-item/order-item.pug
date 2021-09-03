@@ -1,0 +1,18 @@
+mixin order-item(data)
+	div.order-item
+		div.order-item__body
+			div.order-item__left
+				div.order-item__canceling
+					+icon('icon--cross', 'icon--18')
+				div.order-item__img
+					img(src="images/"+data.img, alt=data.alt)
+				div.order-item__info
+					span.text.text--22.order-item__title!=data.title
+					span.text.text--22.text--gray.order-item__price!=data.price 
+						|  р.
+			div.order-item__right
+				div.order-item__value
+					+quantity({})(class="quantity--sidebar")
+
+//- вызов
+//- +order-item({img: '', alt: '', title: '', price: ''})

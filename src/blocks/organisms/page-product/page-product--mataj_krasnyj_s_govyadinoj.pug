@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «МАТАЙ красный с&nbsp;говядиной»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/mataj_krasnyj_s_govyadinoj_big.png" alt="Суп «МАТАЙ красный с говядиной»" title="Суп «МАТАЙ красный с говядиной»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «МАТАЙ красный с&nbsp;говядиной»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, шампиньоны свежие, яичная лапша (мука пшеничная в/с, яйцо куриное, масло растительное, соль), говядина, молоко кокосовое сухое, масло растительное, паста Карри красная(красный перец чили сушеный, чеснок, лемонграсс, лук-шалот, соль, галангал, каффир-лайм, тмин, кориандр), масло растительное, паста Чили(сахар, лук, чеснок, соевое масло, перец чили, креветочный порошок, рыбный соус(экстракт анчоуса, соль, вода), соль), бульон говяжий концентрированный натуральный, лайм свежий, масло кунжутное, сахар тростниковый, кинза свежая, соль, семя кунжутное жареное, сок лайма сухой.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '4,54 г'
+											},
+											{
+												name: 'жиры',
+												number: '7,26 г'
+											},
+											{
+												name: 'углеводы',
+												number: '7,05 г'
+											},
+											{
+												name: 'калории',
+												number: '109,1'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '14,53 г'
+											},
+											{
+												name: 'жиры',
+												number: '23,23 г'
+											},
+											{
+												name: 'углеводы',
+												number: '22,56 г'
+											},
+											{
+												name: 'калории',
+												number: '350,1'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '229', id: 'mataj_krasnyj_s_govyadinoj'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Восходящая звезда паназиатской кухни! Попробуй первым&nbsp;&mdash; будь в&nbsp;тренде!</p> <p class="text">Вспомните свои ощущения, когда вы&nbsp;впервые познакомились с&nbsp;том ямом и&nbsp;фо&nbsp;бо... Вспомнили? Хотите вновь испытать нечто похожее? Красный Матай с&nbsp;говядиной от&nbsp;Фабрики супа &#8470;&nbsp;1&nbsp;&mdash; обжаренное до&nbsp;хрустящей корочки мясо, яичная лапша и&nbsp;букет малазийских специй и&nbsp;приправ&nbsp;&mdash; удовольствие, к&nbsp;которому быстро привыкаешь, как ко&nbsp;всему хорошему. А&nbsp;вот отказаться затем совсем не&nbsp;просто. Только в&nbsp;нашем интернет-магазине, эксклюзивно на&nbsp;территории России, вы&nbsp;сможете приобрести все три вида супа Матай&nbsp;&mdash; красный, зеленый и&nbsp;желтый. Выбор за&nbsp;вами!</p>',
+								url_video: 'https://www.youtube.com/embed/-EkEshWoBKI'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

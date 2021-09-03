@@ -1,0 +1,37 @@
+.h2 {
+	/* 2 Block model */
+	margin: 0;
+
+	/* 3 Typography */
+	font-family: $font-second;
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 44px;
+	color: $color-title;
+	text-align: center;
+	@media (min-width: 992px) {
+		/* 3 Typography */
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+.h2--22 {
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 22px;
+	font-weight: 600;	
+	line-height: 30px;
+	text-align: left;
+}
+.h2--32 {
+	/* 3 Typography */
+	font-size: 32px;
+	line-height: 44px;
+}
+.h2--big {
+	@media(min-width: 992px) {
+		/* 2 Block model */
+		font-size: 65px;
+		line-height: 76px;
+	}
+}

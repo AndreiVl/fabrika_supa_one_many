@@ -1,0 +1,36 @@
+.modal {
+	/* 2 Block model */
+	width: 100%;
+	max-width: 965px;
+	padding: 5px;
+
+	/* 4 Visual */
+	border-radius: 0;
+	box-shadow: 0px 30px 50px rgba(43, 45, 51, 0.1);
+}
+.modal-form__title {
+	/* 2 Block model */
+	margin-bottom: 20px;
+}
+.modal__video {
+	/* 1 Positioning */
+	position: relative;
+
+	/* 2 Block model */
+	display: flex;
+	justify-content: center;
+}
+.modal__iframe-video {
+	/* 2 Block model */
+	display: block;
+	width: 100%;
+	height: 400px;
+}
+.modal a.close-modal {
+	/* 1 Positioning */
+	top: -32px;
+	right: -7px;
+
+	/* 4 Visual */
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACrSURBVHgB7dXBDcJADATAFRVQwnYEHeBOUgqUQidJB5QQ/Mh9olzOTmwe6FbaV1aaT6wDenp+FDq2VwREtLP2YdhSO2qfOBFZwNkAcwHL9hDMFbgHr8HSGw5EDDAr4IATkR2YGWAL/mSBLTgNtMAu8OLYvrVT5duEhBDbP431jlPAUJion4VkwET7DiUSJuyHL5HwywDW4BG+J3ETHgxbiQBL7s4t0dPzt/kCnX+LBBS+fvsAAAAASUVORK5CYII=");
+}

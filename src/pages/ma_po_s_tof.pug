@@ -1,0 +1,48 @@
+doctype html
+html(lang="ru")
+	include include/head.pug
+	+head('Суп «МА ПО с тофу»')
+
+	body
+		div.wrapper
+			include ../blocks/mixins.pug
+
+			+header({
+				menu: {
+					name: 'menu',
+					arg: {
+						items: [
+							{
+								url: '#delivery',
+								link: 'Доставка и оплата'
+							}
+						]
+					}
+				}
+			})(class="header--page")
+
+			main.main.main--page
+				div.container
+					div.row
+						div.col-12
+							+breadcrumbs({items:[{url: '/', text: 'Главная'}, {text: 'Суп «МА&nbsp;ПО с&nbsp;тофу»'}]})
+
+				include ../blocks/organisms/page-product/page-product--ma_po_s_tof.pug
+
+				include ../blocks/organisms/cat/--mini/--mini.pug
+
+				+subscription-form({})(class="subscription-form--pages")
+
+				+delivery({})(class="block--pages delivery--pages")
+
+				div.back
+					div.container
+						div.row
+							div.col-12
+								+link-icon({url: '/', text: 'Вернуться на главную'})
+
+			include ../blocks/organisms/footer/footer.pug
+
+			include ../blocks/organisms/city/city.pug
+
+		include include/script.pug

@@ -1,0 +1,42 @@
+mixin tab(data)
+	div.tab(class!=attributes.class)
+		div.tab__header
+			+#{data.tab.name}(data.tab.arg)
+
+		div.tab__body
+			- for (var i = 0; i < data.items.length; i++)
+				if i == 0
+					div.tab__item.tab__item--active(id=data.items[i]['id'])
+						div.tab__content
+							div.tab__content-body!=data.items[i]['text_body']
+							div.video-iframe.video-iframe--page-product
+								iframe.iframe-video(id="video-start" width="560" height="315" src!=data.items[i]['url_video'] allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				else 
+					div.tab__item(id=data.items[i]['id'])
+						div.tab__content!=data.items[i]['text_content']
+
+//- +tab({
+//- 	tab: {
+//- 		name: 'tabs-header',
+//- 		arg: {
+//- 			items: [
+//- 				{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+//- 				{url: '#tab-2', link: 'Приготовление'},
+//- 				{url: '#tab-3', link: 'Характеристики'}
+//- 			]
+//- 		}
+//- 	},
+//- 	items: [
+//- 		{
+//- 			id: 'tab-1',
+//- 			text_body: '',
+//- 			url_video: '131311313'
+//- 		}
+//- 	],
+//- 	items: [
+//- 		{
+//- 			id: 'tab-2',
+//- 			text_content: '131311313'
+//- 		}
+//- 	],
+//- })

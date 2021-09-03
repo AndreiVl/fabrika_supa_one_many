@@ -1,0 +1,9 @@
+mixin buy-action(data)
+	div.buy-action(data-id=data.id)
+		div.buy-action__left
+			div.buy-action__price
+				span!=data.price
+				|.00 ₽
+			+quantity({})
+		div.buy-action__right
+			+btn({text: 'Добавить в корзину', data_id: data.id})(class="btn--green-flat  productPageAddToCart")

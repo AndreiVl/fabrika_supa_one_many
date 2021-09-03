@@ -1,0 +1,107 @@
+section.page-product
+	div.container.page-product__top
+		div.row
+			div.col-12.col-md-5
+				div.page-product__header.page-product__desctop-hide
+					h1.h1.h1--50.h1--black.page-product__title Суп «МАТАЙ зеленый с&nbsp;тофу»
+					p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+				div.page-product__img
+					img(src="images/mataj_zelenyj_s_tofu_big.png" alt="Суп «МАТАЙ зеленый с тофу»" title="Суп «МАТАЙ зеленый с тофу»")
+
+			div.col-12.col-md-7
+				div.page-product__body
+					div.page-product__header.page-product__mobile-hide 
+						h1.h1.h1--50.h1--black.page-product__title Суп «МАТАЙ зеленый с&nbsp;тофу»
+						p.text.text--16.text--gray.page-product__subtitle вес нетто: 320 г
+
+					div.page-product__composition
+						span.text.text--16.page-product__composition-title
+							strong Состав:
+						p.text.text--14.text--gray.page-product__composition-text вода, тофу(соевые бобы, соль, коагулянт- хлорид кальция, вода), лапша рисовая(вода, рисовая мука), ананасы консервированные, помидоры Черри, молоко кокосовое сухое, паста Карри зеленая ( еленый перец чили, лук-шалот, лемонграсс, соль, чеснок, галангал, каффир-лайм, тмин, кориандр, куркума), лайм свежий, кинза свежая, масло растительное, сахар тростниковый, соль, сок лайма сухой, шпинат сухой.
+
+						div.page-product__compound
+							+compound({
+								left: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 100 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '1,23 г'
+											},
+											{
+												name: 'жиры',
+												number: '1,22 г'
+											},
+											{
+												name: 'углеводы',
+												number: '8,47 г'
+											},
+											{
+												name: 'калории',
+												number: '49,8'
+											}
+										]
+									}
+								},
+								right: {
+									name: 'compound-value',
+									arg: {
+										title: 'Пищевая ценность на 320 г:',
+										items: [
+											{
+												name: 'белки',
+												number: '3,94 г'
+											},
+											{
+												name: 'жиры',
+												number: '3,90 г'
+											},
+											{
+												name: 'углеводы',
+												number: '27,10 г'
+											},
+											{
+												name: 'калории',
+												number: '159,4'
+											}
+										]
+									}
+								}
+							})
+					div.page-product__buy
+						+buy-action({price: '209', id: 'mataj_zelenyj_s_tofu'})
+
+	div.page-product__tabs
+		div.container
+			div.row
+				div.col-12
+					+tab({
+						tab: {
+							name: 'tabs-header',
+							arg: {
+								items: [
+									{url: '#tab-1', link: 'Описание', class: 'tabs__link--active'},
+									{url: '#tab-2', link: 'Приготовление'},
+									{url: '#tab-3', link: 'Характеристики'}
+								]
+							}
+						},
+						items: [
+							{
+								id: 'tab-1',
+								text_body: '<p class="text text--bold">Радость ортодоксального вегана! Все, что доктор прописал!</p> <p class="text">В&nbsp;нашем интернет-магазине всероссийская премьера самого необычного и&nbsp;удивительного паназиатского блюда! Воздушный тофу, зеленая паста карри, рисовая лапша и&nbsp;уникальный набор специй, приправ и&nbsp;зелени разорвут ваши вкусовые рецепторы и&nbsp;надолго завоюют ваши сердца, если не&nbsp;навсегда!</p>', 
+								url_video: 'https://www.youtube.com/embed/3jDFmSdqMfE'
+							},
+							{
+								id: 'tab-2',
+								text_content: '<p class="text text--22">1. В СВЧ-печи: приоткрыть крышку контейнера, разогреть на максимальной мощности в течение 8-9 минут.</p><p class="text text--22">2. В духовом шкафу или на плите: переложить замороженный продукт в подходящую посуду и разогревать до закипания.</p>'
+							},
+							{
+								id: 'tab-3',
+								text_content: '<p class="text text--22">Вес нетто: 320 г <br> Производитель: ООО ГРАНД, Челябинская область, г. Златоуст, ул. Косотурская, д. 17. <br> Тел.: +7(3513)62-00-67</p> <p class="text text--22">ТУ 10.89.11-017-19421968-2020</p>'
+							}
+						]
+					})

@@ -1,0 +1,49 @@
+doctype html
+html(lang="ru")
+	include include/head.pug
+	+head('Оформление заказа')
+
+	body
+		div.wrapper
+			include ../blocks/mixins.pug
+
+			+header({
+				menu: {
+					name: 'menu',
+					arg: {
+						items: [
+							{
+								url: '#delivery',
+								link: 'Доставка и оплата'
+							}
+						]
+					}
+				}
+			})(class="header--page")
+
+			main.main.main--page
+				div.container
+					div.row
+						div.col-12
+							+breadcrumbs({items:[{url: '/', text: 'Главная'}, {text: 'Оформление заказа'}]})
+
+					//- button(id="clearData") Clear data
+
+				include ../blocks/organisms/checkout/checkout.pug
+
+				+subscription-form({})(class="subscription-form--pages")
+
+				+delivery({})(class="block--pages delivery--pages")
+
+				div.back
+					div.container
+						div.row
+							div.col-12
+								+link-icon({url: '/', text: 'Вернуться на главную'})
+
+			include ../blocks/organisms/footer/footer.pug
+
+			include ../blocks/organisms/city/city.pug
+
+
+		include include/script.pug

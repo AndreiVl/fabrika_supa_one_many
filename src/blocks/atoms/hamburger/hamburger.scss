@@ -1,0 +1,102 @@
+.hamburger {
+	/* 1 Positioning */
+	position: relative;
+	z-index: 2;
+
+	/* 2 Block model */
+	display: block;
+	width: 30px;
+	height: 45px;
+	padding: 0;
+
+	/* 4 Visual */
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+}
+.hamburger__visual,
+.hamburger__visual::before,
+.hamburger__visual::after {
+	/* 1 Positioning */
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	/* 2 Block model */
+	display: block;
+	width: 30px;
+	height: 5px;
+	margin-top: -1px;
+
+	/* 4 Visual */
+	background-color: $color-white;
+}
+.hamburger__visual::before {
+	/* 1 Positioning */
+	top: -15px;
+	content: "";
+
+	/* 4 Visual */
+	transform: translateY(7px);
+}
+.hamburger__visual::after {
+	/* 1 Positioning */
+	top: 18px;
+	content: "";
+
+	/* 4 Visual */
+	transform: translateY(-7px);
+}
+.hamburger--opened .hamburger__visual {
+	/* 1 Positioning */
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	/* 2 Block model */
+	display: block;
+	width: 30px;
+	height: 5px;
+
+	/* 4 Visual */
+	background-color: $color-white;
+	transform: rotate(-45deg);
+}
+.hamburger--opened .hamburger__visual::before,
+.hamburger--opened .hamburger__visual::after {
+	/* 2 Block model */
+	display: block;
+
+	/* 4 Visual */
+	content: "";
+
+	/* 5 Animation */
+	transition: 0.2s;
+}
+.hamburger--opened .hamburger__visual::before {
+	/* 1 Positioning */
+	top: -1px;
+	left: -1px;
+
+	/* 2 Block model */
+	width: 24px;
+	height: 2px;
+
+	/* 4 Visual */
+	opacity: 0;
+	transform: rotate(5deg);
+	transform-origin: left bottom;
+}
+.hamburger--opened .hamburger__visual::after {
+	/* 1 Positioning */
+	top: 14px;
+	right: -16px;
+
+	/* 2 Block model */
+	width: 30px;
+
+	/* 4 Visual */
+	transform: rotate(275deg);
+	transform-origin: left bottom;
+}

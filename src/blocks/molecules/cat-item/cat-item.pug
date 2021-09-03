@@ -1,0 +1,22 @@
+mixin cat-item(data)
+	div.cat-item(id=data.id)
+		div.cat-item__body
+			a(href="/"+data.id)
+				img.cat-item__img(src="images/"+data.id+".png" alt=data.title)
+
+			a.h3.cat-item__title(href="/"+data.id)!=data.title
+
+			p.text.text--gray.cat-item__desc!=data.desc
+
+		div.cat-item__action
+			div.cat-item__price
+				span!=data.price
+				|  ₽
+			+btn({text: 'В корзину', data_id: data.id})(class="btn--green addToCart")
+
+//- +cat-item({
+//- 	id: '',
+//- 	title: '',
+//- 	desc: '',
+//- 	price: ''
+//- })

@@ -1,0 +1,23 @@
+mixin compound(data)
+	div.compound
+		div.compound__left
+			+#{data.left.name}(data.left.arg)
+
+		div.compound__right
+			+#{data.right.name}(data.right.arg)
+
+
+//- +compound({
+//- 	left: {
+//- 		name: '',
+//- 		arg: {
+
+//- 		}
+//- 	},
+//- 	right: {
+//- 		name: '',
+//- 		arg: {
+
+//- 		}
+//- 	}
+//- })

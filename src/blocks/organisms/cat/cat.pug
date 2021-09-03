@@ -1,0 +1,17 @@
+mixin cat(data)
+	section.cat.block(id="cat" class!=attributes.class)
+		div.container
+			div.row
+				div.col-12
+					div.block__title
+						h2.h2!=data.title
+			div.row
+				- for (var i = 0; i < data.items.length; i++)
+					div.col-12.col-md-6.col-lg-4.col-xl-3.cat__item
+						+cat-item({
+							id: data.items[i]['id'],
+							title: data.items[i]['title'],
+							desc: data.items[i]['desc'],
+							price: data.items[i]['price']
+						})
+

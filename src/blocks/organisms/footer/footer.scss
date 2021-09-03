@@ -1,0 +1,20 @@
+.footer {
+	/* 2 Block model */
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	/* 4 Visual */
+	background-color: #323232;
+}
+.footer__page .text {
+	/* 2 Block model */
+	margin-bottom: 20px;
+}
+.footer__page .text:last-child {
+	/* 2 Block model */
+	margin-bottom: 0;
+}
+.footer__disclaimer {
+	/* 2 Block model */
+	padding-top: 20px;
+}

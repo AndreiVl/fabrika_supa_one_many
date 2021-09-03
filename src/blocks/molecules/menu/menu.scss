@@ -1,0 +1,141 @@
+.menu {
+	/* 2 Block model */
+	width: 100%;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		width: auto;
+	}
+}
+.menu__list {
+	/* 2 Block model */
+	display: flex;
+	flex-direction: column;
+
+	/* 3 Typography */
+	text-align: center;
+
+	/* 4 Visual */
+	list-style: none;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		flex-direction: row;
+
+		/* 3 Typography */
+		text-align: left;
+	}
+}
+.menu li {
+	/* 2 Block model */
+	margin-bottom: 20px;
+
+	/* 5 Animation */
+	transition: all 0.4s;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		padding-right: 23px;
+		margin-bottom: 0;
+	}
+}
+.menu li:last-child {
+	/* 1 Positioning */
+	padding-right: 0;
+}
+.menu__link {
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 25px;
+	color: $color-white;
+	text-decoration: none;
+
+	/* 5 Animation */
+	transition: all 0.4s ease;
+}
+.menu li:hover .menu__link {
+	/* 3 Typography */
+	opacity: 0.7;
+}
+/* -------------------------------------------- */
+
+/*
+ * Modifiers
+ *
+ */
+.menu--footer .menu__list {
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+.menu--footer li {
+	/* 1 Positioning */
+	position: relative;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: 0;
+	}
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+	@media (min-width: 1400px) {
+		/* 2 Block model */
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+}
+.menu--footer li::before {
+	@media (min-width: 768px) {
+		/* 1 Positioning */
+		position: absolute;
+		top: 50%;
+		right: 0;
+
+		/* 2 Block model */
+		display: block;
+		width: 2px;
+		height: 20px;
+
+		/* 4 Visual */
+		content: "";
+		background-color: #ffffff;
+		transform: translateY(-50%);
+	}
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		height: 30px;
+	}
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		height: 44px;
+	}
+}
+.menu--footer li:last-child {
+	/* 2 Block model */
+	margin-bottom: 0;
+}
+.menu--footer li:last-child::before {
+	/* 2 Block model */
+	display: none;
+}
+.menu--footer .menu__link {
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 16px;
+	line-height: 24px;
+	@media (min-width: 992px) {
+		/* 3 Typography */
+		font-size: 24px;
+		line-height: 32px;
+	}
+	@media (min-width: 1200px) {
+		/* 3 Typography */
+		font-size: 33px;
+		line-height: 40px;
+	}
+}

@@ -1,0 +1,59 @@
+.item-advantages {
+	/* 2 Block model */
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+.item-advantages__img {
+	/* 2 Block model */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 45px;
+	height: 45px;
+	margin-right: 15px;
+
+	/* 4 Visual */
+	background-color: $color-green;
+	border-radius: 50%;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		flex: 0 0 80px;
+		height: 80px;
+		margin-right: 32px;
+	}
+}
+.item-advantages__img .icon--dish {
+	/* 2 Block model */
+	width: 25px;
+	height: 25px;
+	@media(min-width: 768px) {
+		/* 2 Block model */
+		width: 36px;
+		height: 36px;
+	}
+}
+.item-advantages__body {
+	/* 2 Block model */
+	flex-grow: 2;
+	align-self: center;
+}
+.item-advantages--revers {
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		flex-direction: row-reverse;
+	}
+}
+.item-advantages--revers .item-advantages__img {
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		margin-right: 0;
+		margin-left: 32px;
+	}
+}
+.item-advantages--revers .item-advantages__text {
+	@media (min-width: 992px) {
+		/* 3 Typography */
+		text-align: left;
+	}
+}

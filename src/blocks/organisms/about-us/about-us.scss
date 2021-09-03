@@ -1,0 +1,10 @@
+.about-us {
+	/* 2 Block model */
+	padding-top: 40px;
+	padding-bottom: 20px;
+	@media(min-width: 768px) {
+		/* 2 Block model */
+		padding-top: 80px;
+		padding-bottom: 39px;
+	}
+}

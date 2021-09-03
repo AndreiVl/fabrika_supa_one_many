@@ -1,0 +1,26 @@
+.block {
+	/* 2 Block model */
+	margin-bottom: 40px;
+	@media(min-width: 1200px) {
+		/* 2 Block model */
+		margin-bottom: 113px;
+	}
+}
+.block__title	{
+	/* 2 Block model */
+	margin-bottom: 30px;
+	@media(min-width: 1200px) {
+		/* 2 Block model */
+		margin-bottom: 54px;
+	}
+}
+.block--pages .block__title {
+	/* 2 Block model */
+	margin-bottom: 49px;
+}
+.block--pages .block__title .h2 {
+	/* 3 Typography */
+	font-size: 32px;
+	line-height: 44px;
+	text-align: left;
+}

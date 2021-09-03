@@ -1,0 +1,10 @@
+mixin item-advantages(data)
+	div.item-advantages(class!=attributes.class)
+		div.item-advantages__img
+			+icon('icon--dish')
+		div.item-advantages__body
+			h3.h3!=data.title
+			p.text.text--gray.item-advantages__text!=data.text
+
+//- вызов
+//- +item-advantages({title: '', text: ''})
